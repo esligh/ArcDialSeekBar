@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ArcDialSeekBar">
+        <attr name="line_stroke_width" format="dimension" />
+        <attr name="background_color" format="color"></attr>
+        <attr name="start_angle" format="float"></attr>
+        <attr name="end_angle" format="float"></attr>
+        <attr name="touch_enable" format="boolean"></attr>
+        <attr name="show_text" format="boolean"></attr>
+        <attr name="text_color" format="color"></attr>
+        <attr name="text_size" format="dimension"></attr>
+        <attr name="long_mark_count" format="integer"></attr>
+        <attr name="inner_divider_count" format="integer"></attr>
+        <attr name="long_mark_len" format="dimension" />
+        <attr name="short_mark_len" format="dimension" />
+        <attr name="color_mode" format="string" />
+        <attr name="progress_color" format="color"></attr>
+    </declare-styleable>
+
+</resources>
