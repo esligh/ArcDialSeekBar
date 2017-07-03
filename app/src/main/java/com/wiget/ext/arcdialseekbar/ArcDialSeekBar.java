@@ -12,7 +12,21 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-
+/*
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
 public class ArcDialSeekBar extends View
 {
 	private static final String TAG = "ArcDialSeekBar";
@@ -161,6 +175,8 @@ public class ArcDialSeekBar extends View
     private String mColorMode ;
 
     private int mArcProgressColor = DEFAULT_PROGRESS_COLOR;
+
+	private OnSeekBarChangeListener mListener;
 
 	/**
 	 * arc progress colors for the gradient shader
@@ -334,12 +350,17 @@ public class ArcDialSeekBar extends View
 	
 	public void setProgress(int progress)
 	{
-		if(progress >=0 && progress <= mMax){
-			this.mProgress = progress;
-		}else{
-			this.mProgress = mMax;
+		if(progress != mProgress) {
+			if (progress >= 0 && progress <= mMax) {
+				this.mProgress = progress;
+			} else {
+				this.mProgress = mMax;
+			}
+			invalidate();
+			if(mListener != null){
+				mListener.onProgressChanged(this,progress);
+			}
 		}
-		invalidate();
 	}
 
 	@SuppressLint("ClickableViewAccessibility")
@@ -485,5 +506,14 @@ public class ArcDialSeekBar extends View
         return this.mLongMarkCount;
     }
 
+	public void setOnSeekBarChangeListener(OnSeekBarChangeListener l)
+	{
+		this.mListener =  l;
+	}
+
+    public interface  OnSeekBarChangeListener
+	{
+		public void onProgressChanged (ArcDialSeekBar seekBar, int progress);
+	}
 }
 
