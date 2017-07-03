@@ -1,5 +1,6 @@
 # ArcDialSeekBar
 
+![image](https://github.com/esligh/ArcDialSeekBar/raw/master/mmexport1499088584775.jpg)
 
 Android seekbar with arc shape. 
 
@@ -9,6 +10,29 @@ Also it colud be used to create a progress bar.
 The only file you need is ArcDialSeekBar.java 
 
 Download the project to run a simple example.
+
+```Java
+
+<com.wiget.ext.arcdialseekbar.ArcDialSeekBar
+        android:id="@+id/arc_sb_view_2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/arc_sb_view_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_margin="16dp"
+        app:start_angle="135"
+        app:end_angle="45"
+        app:long_mark_len="15dp"
+        app:short_mark_len="8dp"
+        app:progress_color="#009688"
+        app:text_color="#009688"
+        app:text_size="12sp"
+        app:inner_divider_count="5"
+        app:long_mark_count="8"
+        app:show_text="true"
+        app:color_mode="single"/>
+```
 
 # attributes
 
