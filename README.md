@@ -9,10 +9,23 @@ Also it colud be used to create a progress bar.
 
 The only file you need is ArcDialSeekBar.java 
 
-Download the project to run a simple example.
+# quick start
 
-```Java
-
+#### 1.Add root build.gradle
+```
+ repositories {
+        // ...
+        maven { url "https://jitpack.io" }
+ }
+```
+#### 2.Add build.gradle
+```
+dependencies {
+	       compile 'com.github.esligh:ArcDialSeekBar:1.0.0'
+	}
+```
+#### 3.Added to the XML
+```
 <com.wiget.ext.arcdialseekbar.ArcDialSeekBar
         android:id="@+id/arc_sb_view_2"
         android:layout_width="200dp"
@@ -37,27 +50,45 @@ Download the project to run a simple example.
 # attributes
 
 * line_stroke_width
+  **the line width for the long and short marks**
 * background_color       
-the arc background color ,default if dark grey 
+  **the arc background color ,default if dark grey** 
 * start_angle            
-start_angle range 0 to 360 clockwise  
+  **start_angle range 0 to 360 clockwise**  
 * end_angle             
-end_angle range 0 to 360  clockwise
+  **end_angle range 0 to 360  clockwise**
 * touch_enable           
-if false , it can be used as a progress 
+  **if false , it can be used as a progress** 
 * show_text              
-if true,show the indicator text  
+  **if true,show the indicator text**  
 * text_color            
-the color of text 
+  **the color of text** 
 * text_size            
-the size of text 
+  **the size of text** 
 * long_mark_count       
-the total count of long mark .
+  **the total count of long mark**
 * inner_divider_count   
-the value between two long marks. 
-* long_mark_len    
+  **the value between two long marks.** 
+* long_mark_len 
+  **the length of the long mark**
 * short_mark_len  
+  **the length of the short mark**
 * color_mode            
-single or gradient 
+  **single or gradient** 
 * progress_color        
-if color mode is single ,this attribute will be valid .
+  **if color mode is single ,this attribute will be valid** .
+
+# License
+    Copyright 2015-2019 dinuscxj
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
