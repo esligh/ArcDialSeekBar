@@ -79,7 +79,7 @@ dependencies {
   **if color mode is single ,this attribute will be valid** .
 
 # License
-    Copyright 2015-2019 dinuscxj
+    Copyright 2015-2019 esligh
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
