@@ -49,7 +49,7 @@ dependencies {
 
 # attributes
 
-* line_stroke_width
+* line_stroke_width  
   **the line width for the long and short marks**
 * background_color       
   **the arc background color ,default if dark grey** 
@@ -69,9 +69,9 @@ dependencies {
   **the total count of long mark**
 * inner_divider_count   
   **the value between two long marks.** 
-* long_mark_len 
+* long_mark_len  
   **the length of the long mark**
-* short_mark_len  
+* short_mark_len    
   **the length of the short mark**
 * color_mode            
   **single or gradient** 
